@@ -15,13 +15,7 @@ var COL_NOMBRE    = 3;
 var COL_TELEFONO  = 4;
 var COL_TIMESTAMP = 5;
 
-// ─── CORS HELPER ────────────────────────────────────────────
-function setCorsHeaders(output) {
-  return output
-    .setHeader('Access-Control-Allow-Origin', '*')
-    .setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-    .setHeader('Access-Control-Allow-Headers', 'Content-Type');
-}
+
 
 // ─── GET: Devuelve todos los números con su estado ───────────
 function doGet(e) {
@@ -43,15 +37,13 @@ function doGet(e) {
     }
 
     var response = JSON.stringify({ success: true, data: numbers });
-    var output   = ContentService.createTextOutput(response)
-                     .setMimeType(ContentService.MimeType.JSON);
-    return setCorsHeaders(output);
+    return ContentService.createTextOutput(response)
+             .setMimeType(ContentService.MimeType.JSON);
 
   } catch (err) {
     var errResponse = JSON.stringify({ success: false, error: err.toString() });
-    var errOutput   = ContentService.createTextOutput(errResponse)
-                       .setMimeType(ContentService.MimeType.JSON);
-    return setCorsHeaders(errOutput);
+    return ContentService.createTextOutput(errResponse)
+             .setMimeType(ContentService.MimeType.JSON);
   }
 }
 
@@ -159,11 +151,10 @@ function findRow(sheet, numero) {
   return null;
 }
 
-// ─── UTILIDAD: Crear respuesta JSON con CORS ─────────────────
+// ─── UTILIDAD: Crear respuesta JSON ──────────────────────────
 function jsonResponse(obj) {
-  var output = ContentService.createTextOutput(JSON.stringify(obj))
-                 .setMimeType(ContentService.MimeType.JSON);
-  return setCorsHeaders(output);
+  return ContentService.createTextOutput(JSON.stringify(obj))
+           .setMimeType(ContentService.MimeType.JSON);
 }
 
 // ─── INICIALIZACIÓN: Poblar el Sheet con los 100 números ─────
