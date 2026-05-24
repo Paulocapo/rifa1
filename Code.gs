@@ -5,7 +5,7 @@
 // ============================================================
 
 // ─── CONFIGURACIÓN ──────────────────────────────────────────
-var SPREADSHEET_ID = 'REEMPLAZAR_CON_TU_SPREADSHEET_ID';
+var SPREADSHEET_ID = '1BowJTvY5G84jx1KnMouu0KiWH62eiTHO6GmU9QFda3g';
 var SHEET_NAME     = 'Numeros';
 
 // Índices de columnas (base 1 para getRange, base 0 para arrays)
