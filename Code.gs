@@ -75,7 +75,7 @@ function handleReservar(params) {
   var nombre   = params.nombre   || '';
   var telefono = params.telefono || '';
 
-  if (!numero || !nombre || !telefono) {
+  if (numero === undefined || numero === null || isNaN(numero) || !nombre || !telefono) {
     return jsonResponse({ success: false, error: 'Faltan datos obligatorios.' });
   }
 
@@ -104,7 +104,7 @@ function handleReservar(params) {
 // ─── ACCIÓN: Confirmar pago (Reservado → Vendido) ────────────
 function handleConfirmar(params) {
   var numero = parseInt(params.numero);
-  if (!numero) return jsonResponse({ success: false, error: 'Número inválido.' });
+  if (numero === undefined || numero === null || isNaN(numero)) return jsonResponse({ success: false, error: 'Número inválido.' });
 
   var ss    = SpreadsheetApp.openById(SPREADSHEET_ID);
   var sheet = ss.getSheetByName(SHEET_NAME);
@@ -124,7 +124,7 @@ function handleConfirmar(params) {
 // ─── ACCIÓN: Liberar un número ───────────────────────────────
 function handleLiberar(params) {
   var numero = parseInt(params.numero);
-  if (!numero) return jsonResponse({ success: false, error: 'Número inválido.' });
+  if (numero === undefined || numero === null || isNaN(numero)) return jsonResponse({ success: false, error: 'Número inválido.' });
 
   var ss    = SpreadsheetApp.openById(SPREADSHEET_ID);
   var sheet = ss.getSheetByName(SHEET_NAME);

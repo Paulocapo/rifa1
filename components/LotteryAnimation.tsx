@@ -33,8 +33,8 @@ export default function LotteryAnimation({ vendidos, onClose }: LotteryAnimation
     const chosen = vendidos[Math.floor(Math.random() * vendidos.length)];
     let speed = 60;
     let elapsed = 0;
-    const totalDuration = 4000;
-    const slowStart = 2500;
+    const totalDuration = 8000; // 8 segundos totales
+    const slowStart = 5500; // Empieza a frenar a los 5.5 segundos
 
     const tick = () => {
       // Número aleatorio para la animación
