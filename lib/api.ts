@@ -17,7 +17,7 @@ export async function reserveNumber(
 ): Promise<ApiResponse> {
   const res = await fetch(APPS_SCRIPT_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify({ action: 'reservar', numero, nombre, telefono }),
   });
   return res.json();
@@ -26,7 +26,7 @@ export async function reserveNumber(
 export async function confirmPayment(numero: number): Promise<ApiResponse> {
   const res = await fetch(APPS_SCRIPT_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify({ action: 'confirmar', numero }),
   });
   return res.json();
@@ -35,7 +35,7 @@ export async function confirmPayment(numero: number): Promise<ApiResponse> {
 export async function releaseNumber(numero: number): Promise<ApiResponse> {
   const res = await fetch(APPS_SCRIPT_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify({ action: 'liberar', numero }),
   });
   return res.json();
