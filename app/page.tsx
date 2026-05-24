@@ -75,7 +75,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="text-center py-6 border-t border-white/5 px-4">
         <p className="text-purple-300/30 text-xs">
-          Rifa Benéfica — Sorteo Cordero 🐑 &nbsp;|&nbsp;
+          Instituto Bertora 5to A — Gran Sorteo &nbsp;|&nbsp;
           <a href="/admin" className="hover:text-purple-300/50 transition-colors">
             Admin
           </a>

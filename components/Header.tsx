@@ -26,21 +26,28 @@ export default function Header({ libres, reservados, vendidos }: HeaderProps) {
         <div className="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-400/30 rounded-full px-4 py-1.5 mb-4">
           <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" />
           <span className="text-yellow-300 text-xs font-semibold tracking-widest uppercase">
-            Rifa Benéfica
+            Instituto Bertora 5to A
           </span>
         </div>
 
         {/* Título principal */}
         <h1 className="text-4xl md:text-6xl font-black text-white mb-2 leading-tight tracking-tight">
-          Sorteo del{' '}
+          Gran{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">
-            Cordero 🐑
+            Sorteo
           </span>
         </h1>
 
-        <p className="text-purple-200 text-sm md:text-base mb-8 max-w-md mx-auto">
-          Participá y ganás un cordero entero. ¡Solo 100 números disponibles!
-        </p>
+        <div className="text-purple-200 text-sm md:text-base mb-8 max-w-lg mx-auto flex flex-col gap-2">
+          <p className="font-bold text-yellow-300 text-xl tracking-wide uppercase">
+            ¡Lechón a la estaca + 1 Whisky y 2 Vinos!
+          </p>
+          <p className="text-lg">El número a tan solo: <span className="font-bold text-green-400 text-xl">$1000</span></p>
+          <div className="bg-black/30 p-3 rounded-xl border border-white/10 mt-2">
+            <p className="font-medium text-white">📅 25 de Mayo &nbsp;|&nbsp; ⏰ Entre 13hs y 14hs</p>
+            <p className="text-sm mt-1">📍 Stand Número 16 (¡Puede pasar a verlo por el stand!)</p>
+          </div>
+        </div>
 
         {/* Stats */}
         <div className="flex justify-center gap-3 md:gap-6 flex-wrap">
