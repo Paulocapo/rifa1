@@ -73,22 +73,23 @@ export default function ReservationModal({
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-md bg-gradient-to-b from-gray-900 to-gray-950 border border-purple-500/20 rounded-3xl shadow-2xl shadow-purple-900/50 overflow-hidden animate-modal-in">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-violet-800/50 to-purple-800/50 px-6 pt-6 pb-4 border-b border-white/5">
+      <div className="relative w-full max-w-md bg-gradient-to-b from-gray-900 to-[#081326] border border-blue-500/20 rounded-3xl shadow-2xl shadow-blue-900/50 overflow-hidden animate-modal-in">
+        {/* Header decorativo */}
+        <div className="bg-gradient-to-r from-[#102440] to-[#0c1a2e] px-6 pt-6 pb-4 border-b border-white/5">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-purple-300 text-xs font-semibold uppercase tracking-widest mb-1">
-                Reservando número
+              <p className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-1">
+                Reservar Número
               </p>
-              <h2
-                id="modal-title"
-                className="text-5xl font-black text-white leading-none"
-              >
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">
-                  #{numStr}
-                </span>
-              </h2>
+              <h3 className="text-3xl font-black text-white">
+                #{String(number.numero).padStart(2, '0')}
+              </h3>
+            </div>
+            <div className="text-right">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ebd9a8] to-[#d6c28f]">
+                $3000
+              </span>
+            </div>
             </div>
             <button
               onClick={onClose}
@@ -98,14 +99,13 @@ export default function ReservationModal({
             >
               ✕
             </button>
-          </div>
         </div>
 
         {/* Formulario */}
         <form onSubmit={handleSubmit} className="px-6 py-5 space-y-4" noValidate>
           {/* Nombre */}
           <div>
-            <label htmlFor="input-nombre" className="block text-purple-200 text-sm font-medium mb-1.5">
+            <label htmlFor="input-nombre" className="block text-blue-200 text-sm font-medium mb-1.5">
               Nombre y Apellido <span className="text-red-400">*</span>
             </label>
             <input
@@ -119,7 +119,7 @@ export default function ReservationModal({
               className={`w-full bg-white/5 border rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 transition-all ${
                 errors.nombre
                   ? 'border-red-500/60 focus:ring-red-500/30'
-                  : 'border-white/10 focus:border-purple-400/50 focus:ring-purple-500/20'
+                  : 'border-white/10 focus:border-blue-400/50 focus:ring-blue-500/20'
               }`}
             />
             {errors.nombre && (
@@ -131,8 +131,8 @@ export default function ReservationModal({
 
           {/* Teléfono */}
           <div>
-            <label htmlFor="input-telefono" className="block text-purple-200 text-sm font-medium mb-1.5">
-              Teléfono de contacto <span className="text-red-400">*</span>
+            <label htmlFor="input-telefono" className="block text-blue-200 text-sm font-medium mb-1.5">
+              Teléfono (WhatsApp) <span className="text-red-400">*</span>
             </label>
             <input
               id="input-telefono"
@@ -144,7 +144,7 @@ export default function ReservationModal({
               className={`w-full bg-white/5 border rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 transition-all ${
                 errors.telefono
                   ? 'border-red-500/60 focus:ring-red-500/30'
-                  : 'border-white/10 focus:border-purple-400/50 focus:ring-purple-500/20'
+                  : 'border-white/10 focus:border-blue-400/50 focus:ring-blue-500/20'
               }`}
             />
             {errors.telefono && (
@@ -160,15 +160,14 @@ export default function ReservationModal({
               type="button"
               onClick={onClose}
               disabled={loading}
-              className="flex-1 py-3 rounded-xl border border-white/10 text-white/60 hover:text-white hover:border-white/20 hover:bg-white/5 transition-all font-medium disabled:opacity-50"
+              className="flex-1 py-3 rounded-xl border border-white/10 hover:bg-white/5 text-blue-200 font-medium transition-colors disabled:opacity-50"
             >
               Cancelar
             </button>
             <button
               type="submit"
               disabled={loading}
-              id="btn-confirmar-reserva"
-              className="flex-1 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white font-bold shadow-lg shadow-purple-900/50 hover:shadow-purple-700/50 transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="flex-1 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 text-white font-bold shadow-lg shadow-blue-900/50 hover:shadow-blue-700/50 transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>

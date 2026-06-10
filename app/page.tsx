@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-950 via-violet-950/20 to-gray-950 text-white">
+    <main className="min-h-screen bg-[#081326] text-white">
       {/* Header con stats en vivo */}
       <Header
         libres={libres.length}
@@ -47,8 +47,8 @@ export default function Home() {
       {/* Estado de carga / error */}
       {loading && (
         <div className="flex flex-col items-center justify-center py-16 gap-3">
-          <div className="w-12 h-12 rounded-full border-4 border-purple-400/30 border-t-purple-400 animate-spin" />
-          <p className="text-purple-300/60 text-sm">Cargando números...</p>
+          <div className="w-12 h-12 rounded-full border-4 border-blue-400/30 border-t-blue-400 animate-spin" />
+          <p className="text-blue-300/60 text-sm">Cargando números...</p>
         </div>
       )}
 
@@ -74,9 +74,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center py-6 border-t border-white/5 px-4">
-        <p className="text-purple-300/30 text-xs">
-          Instituto Bertora 5to A — Gran Sorteo &nbsp;|&nbsp;
-          <a href="/admin" className="hover:text-purple-300/50 transition-colors">
+        <p className="text-blue-300/40 text-xs">
+          Rifa Día del Padre &nbsp;|&nbsp;
+          <a href="/admin" className="hover:text-blue-300 transition-colors underline decoration-dotted">
             Admin
           </a>
         </p>

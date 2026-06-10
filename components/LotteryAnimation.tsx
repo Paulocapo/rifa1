@@ -101,7 +101,7 @@ export default function LotteryAnimation({ vendidos, onClose }: LotteryAnimation
 
       <div className="relative w-full max-w-lg text-center">
         {/* Título */}
-        <h2 className="text-purple-300 text-sm font-bold tracking-widest uppercase mb-6">
+        <h2 className="text-blue-300 text-sm font-bold tracking-widest uppercase mb-6">
           🎰 Bolillero Digital
         </h2>
 
@@ -111,24 +111,24 @@ export default function LotteryAnimation({ vendidos, onClose }: LotteryAnimation
           <div
             className={`w-64 h-64 mx-auto rounded-full border-4 flex items-center justify-center shadow-2xl transition-all duration-300 ${
               phase === 'done'
-                ? 'border-yellow-400 shadow-yellow-500/40 bg-yellow-500/10'
+                ? 'border-[#ebd9a8] shadow-[#ebd9a8]/40 bg-[#ebd9a8]/10'
                 : phase === 'spinning' || phase === 'slowing'
-                ? 'border-purple-400 shadow-purple-500/40 bg-purple-500/10 animate-pulse-ring'
-                : 'border-purple-600/40 bg-purple-900/20'
+                ? 'border-blue-400 shadow-blue-500/40 bg-blue-500/10 animate-pulse-ring'
+                : 'border-blue-600/40 bg-blue-900/20'
             }`}
           >
             {/* Anillo interno */}
             <div
               className={`w-52 h-52 rounded-full border-2 flex items-center justify-center ${
                 phase === 'done'
-                  ? 'border-yellow-300/60 bg-yellow-500/5'
-                  : 'border-purple-500/30 bg-purple-900/30'
+                  ? 'border-[#ebd9a8]/60 bg-[#ebd9a8]/5'
+                  : 'border-blue-500/30 bg-blue-900/30'
               }`}
             >
               <span
                 className={`font-black leading-none transition-all duration-100 ${
                   phase === 'done'
-                    ? 'text-8xl text-yellow-300 animate-winner-appear'
+                    ? 'text-8xl text-[#ebd9a8] animate-winner-appear'
                     : 'text-7xl text-white'
                 }`}
               >
@@ -157,7 +157,7 @@ export default function LotteryAnimation({ vendidos, onClose }: LotteryAnimation
         {/* Estado / ganador */}
         {phase === 'idle' && (
           <div className="mb-6">
-            <p className="text-purple-200 text-sm mb-2">
+            <p className="text-blue-200 text-sm mb-2">
               {vendidos.length} número{vendidos.length !== 1 ? 's' : ''} vendido{vendidos.length !== 1 ? 's' : ''} en juego
             </p>
             {vendidos.length === 0 && (
@@ -169,7 +169,7 @@ export default function LotteryAnimation({ vendidos, onClose }: LotteryAnimation
         )}
 
         {(phase === 'spinning' || phase === 'slowing') && (
-          <p className="text-purple-300 text-sm animate-pulse mb-6">
+          <p className="text-blue-300 text-sm animate-pulse mb-6">
             {phase === 'slowing' ? '⏳ Frenando...' : '🎲 Girando...'}
           </p>
         )}
@@ -177,11 +177,11 @@ export default function LotteryAnimation({ vendidos, onClose }: LotteryAnimation
         {phase === 'done' && winner && (
           <div className="mb-6 animate-fade-in-up">
             <div className="text-3xl mb-3">🏆</div>
-            <h3 className="text-4xl font-black text-yellow-300 mb-2">¡Ganador!</h3>
-            <div className="bg-yellow-500/10 border border-yellow-400/20 rounded-2xl px-6 py-4 inline-block">
+            <h3 className="text-4xl font-black text-[#ebd9a8] mb-2">¡Ganador!</h3>
+            <div className="bg-[#ebd9a8]/10 border border-[#ebd9a8]/20 rounded-2xl px-6 py-4 inline-block">
               <p className="text-white text-2xl font-bold mb-1">{winner.nombre}</p>
-              <p className="text-yellow-300/70 text-sm">📞 {winner.telefono}</p>
-              <p className="text-yellow-300/50 text-xs mt-1">Número #{String(winner.numero).padStart(2, '0')}</p>
+              <p className="text-[#ebd9a8]/70 text-sm">📞 {winner.telefono}</p>
+              <p className="text-[#ebd9a8]/50 text-xs mt-1">Número #{String(winner.numero).padStart(2, '0')}</p>
             </div>
           </div>
         )}
@@ -200,7 +200,7 @@ export default function LotteryAnimation({ vendidos, onClose }: LotteryAnimation
                 onClick={startLottery}
                 disabled={vendidos.length === 0}
                 id="btn-iniciar-sorteo"
-                className="px-8 py-3 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-yellow-400 hover:to-amber-400 text-black font-black shadow-lg shadow-yellow-900/40 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                className="px-8 py-3 rounded-xl bg-gradient-to-r from-[#ebd9a8] to-[#d6c28f] hover:from-[#d6c28f] hover:to-[#c4ae77] text-[#081326] font-black shadow-lg shadow-[#ebd9a8]/40 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 🎰 ¡SORTEAR AHORA!
               </button>
@@ -217,7 +217,7 @@ export default function LotteryAnimation({ vendidos, onClose }: LotteryAnimation
               </button>
               <button
                 onClick={handleClose}
-                className="px-8 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white font-bold shadow-lg shadow-purple-900/40 transition-all"
+                className="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 text-white font-bold shadow-lg shadow-blue-900/40 transition-all"
               >
                 ✓ Finalizar
               </button>
@@ -225,7 +225,7 @@ export default function LotteryAnimation({ vendidos, onClose }: LotteryAnimation
           )}
 
           {(phase === 'spinning' || phase === 'slowing') && (
-            <div className="flex items-center gap-2 text-purple-300">
+            <div className="flex items-center gap-2 text-blue-300">
               <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24" fill="none">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />

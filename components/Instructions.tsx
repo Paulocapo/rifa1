@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const ALIAS = 'mspcomp.mp';
+const ALIAS = 'patocabelier';
 const WHATSAPP = '543446203480'; // Formato: 5491112345678
 
 const steps = [
@@ -13,7 +13,7 @@ const steps = [
     text: (
       <>
         Transferí el valor al alias:{' '}
-        <span className="font-bold text-yellow-300 bg-yellow-500/10 px-2 py-0.5 rounded-lg border border-yellow-400/20">
+        <span className="font-bold text-[#ebd9a8] bg-[#ebd9a8]/10 px-2 py-0.5 rounded-lg border border-[#ebd9a8]/20">
           {ALIAS}
         </span>
       </>
@@ -28,7 +28,7 @@ const steps = [
           href={`https://wa.me/${WHATSAPP}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-bold text-green-300 underline decoration-dotted underline-offset-2 hover:text-green-200 transition-colors"
+          className="font-bold text-blue-300 underline decoration-dotted underline-offset-2 hover:text-blue-200 transition-colors"
         >
           {WHATSAPP}
         </a>
@@ -50,10 +50,10 @@ export default function Instructions() {
               key={step.num}
               className="flex items-start gap-3 bg-white/5 rounded-2xl p-4 border border-white/5 hover:border-purple-400/20 transition-colors"
             >
-              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-purple-700 flex items-center justify-center text-white font-black text-sm shadow-lg shadow-purple-900/50">
+              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-[#102440] flex items-center justify-center text-[#ebd9a8] font-black text-sm shadow-lg shadow-blue-900/50 border border-[#ebd9a8]/20">
                 {step.num}
               </span>
-              <p className="text-purple-100 text-sm leading-relaxed mt-0.5">{step.text}</p>
+              <p className="text-blue-100 text-sm leading-relaxed mt-0.5">{step.text}</p>
             </div>
           ))}
         </div>

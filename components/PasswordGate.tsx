@@ -33,22 +33,22 @@ export default function PasswordGate({ onSuccess }: PasswordGateProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-violet-950 to-gray-950 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#081326] flex items-center justify-center p-4">
       <div
         className={`w-full max-w-sm bg-gray-900/80 border border-white/10 rounded-3xl p-8 shadow-2xl backdrop-blur-sm transition-all ${
           shaking ? 'animate-shake' : ''
         }`}
       >
         {/* Icono */}
-        <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-violet-500/20 border border-violet-400/20 flex items-center justify-center">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8 text-violet-300">
+        <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-500/20 border border-blue-400/20 flex items-center justify-center">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8 text-blue-300">
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
             <path d="M7 11V7a5 5 0 0110 0v4" />
           </svg>
         </div>
 
-        <h1 className="text-white text-2xl font-black text-center mb-1">Panel Admin</h1>
-        <p className="text-purple-300/60 text-sm text-center mb-6">Ingresá la contraseña para continuar</p>
+        <h1 className="text-white text-2xl font-black text-center mb-1">Acceso Restringido</h1>
+        <p className="text-blue-300/60 text-sm text-center mb-6">Ingresá la contraseña para continuar</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -63,7 +63,7 @@ export default function PasswordGate({ onSuccess }: PasswordGateProps) {
               className={`w-full bg-white/5 border rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 transition-all text-center text-lg tracking-widest ${
                 error
                   ? 'border-red-500/60 focus:ring-red-500/30'
-                  : 'border-white/10 focus:border-purple-400/50 focus:ring-purple-500/20'
+                  : 'border-white/10 focus:border-blue-400/50 focus:ring-blue-500/20'
               }`}
             />
             {error && (
@@ -76,15 +76,15 @@ export default function PasswordGate({ onSuccess }: PasswordGateProps) {
           <button
             type="submit"
             id="btn-admin-login"
-            className="w-full py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white font-bold shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 transition-all"
+            className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 text-white font-bold shadow-lg shadow-blue-900/40 hover:shadow-blue-700/40 transition-all"
           >
             Ingresar al Panel
           </button>
         </form>
 
         <p className="text-center mt-4">
-          <a href="/" className="text-purple-400/60 hover:text-purple-300 text-xs transition-colors">
-            ← Volver a la rifa
+          <a href="/" className="text-blue-400/60 hover:text-blue-300 text-xs transition-colors">
+            ← Volver a la vista pública
           </a>
         </p>
       </div>

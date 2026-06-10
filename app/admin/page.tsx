@@ -21,7 +21,7 @@ export default function AdminPage() {
   const totalLibres = libres.length;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-950 via-violet-950/20 to-gray-950 text-white">
+    <main className="min-h-screen bg-[#081326] text-white">
       {/* Lotería Modal */}
       {showLottery && (
         <LotteryAnimation
@@ -32,11 +32,11 @@ export default function AdminPage() {
 
       {/* Header Admin */}
       <header className="relative border-b border-white/5">
-        <div className="absolute inset-0 bg-gradient-to-r from-violet-950 to-purple-950 opacity-80" />
+        <div className="absolute inset-0 bg-[#0c1a2e] opacity-80" />
         <div className="relative z-10 px-4 py-5 max-w-3xl mx-auto flex items-center justify-between">
           <div>
-            <span className="text-purple-300 text-xs font-semibold uppercase tracking-widest">Panel Admin</span>
-            <h1 className="text-white text-xl font-black">Rifa Benéfica 🐑</h1>
+            <span className="text-[#ebd9a8] text-xs font-semibold uppercase tracking-widest">Panel Admin</span>
+            <h1 className="text-white text-xl font-black">Rifa Día del Padre 🧔🏻‍♂️</h1>
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -52,7 +52,7 @@ export default function AdminPage() {
             </button>
             <a
               href="/"
-              className="text-purple-300/60 hover:text-purple-200 text-xs transition-colors border border-white/10 rounded-lg px-3 py-1.5 hover:bg-white/5"
+              className="text-blue-300/60 hover:text-blue-200 text-xs transition-colors border border-white/10 rounded-lg px-3 py-1.5 hover:bg-white/5"
             >
               ← Vista pública
             </a>
@@ -86,7 +86,7 @@ export default function AdminPage() {
             )}
           </button>
           {totalVendidos === 0 && (
-            <p className="text-purple-300/40 text-xs mt-2">
+            <p className="text-blue-300/40 text-xs mt-2">
               Necesitás al menos un número vendido para sortear
             </p>
           )}
@@ -102,8 +102,8 @@ export default function AdminPage() {
         {/* Loading */}
         {loading && (
           <div className="flex items-center justify-center py-8 gap-3">
-            <div className="w-6 h-6 rounded-full border-2 border-purple-400/30 border-t-purple-400 animate-spin" />
-            <p className="text-purple-300/60 text-sm">Cargando...</p>
+            <div className="w-6 h-6 rounded-full border-2 border-blue-400/30 border-t-blue-400 animate-spin" />
+            <p className="text-blue-300/60 text-sm">Cargando...</p>
           </div>
         )}
 

@@ -54,14 +54,14 @@ export default function SuccessModal({ numero, nombre, onClose }: SuccessModalPr
             </div>
           </div>
 
-          <p className="text-purple-200 text-sm mb-1">
-            Reservado a nombre de:
+          <p className="text-blue-200 text-sm mb-1">
+            Tu reserva fue registrada a nombre de:
           </p>
           <p className="text-white font-bold text-lg mb-5">{nombre}</p>
 
-          <div className="bg-amber-500/10 border border-amber-400/20 rounded-2xl p-3 mb-5">
-            <p className="text-amber-200 text-xs">
-              📌 Recordá transferir el monto y enviar el comprobante para confirmar tu participación.
+          <div className="bg-[#ebd9a8]/10 border border-[#ebd9a8]/20 rounded-2xl p-3 mb-5">
+            <p className="text-[#ebd9a8] text-xs">
+              Tu reserva expira en <span className="font-bold">12 horas</span>. Recordá transferir el monto y enviar el comprobante para confirmar tu participación.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export default function SuccessModal({ numero, nombre, onClose }: SuccessModalPr
             target="_blank"
             rel="noopener noreferrer"
             id="btn-whatsapp"
-            className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold shadow-lg shadow-green-900/40 hover:shadow-green-700/40 transition-all mb-3"
+            className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 text-white font-bold shadow-lg shadow-blue-900/40 hover:shadow-blue-700/40 transition-all flex items-center justify-center gap-2"
           >
             <WhatsAppIcon />
             Enviar comprobante por WhatsApp

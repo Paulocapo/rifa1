@@ -32,7 +32,7 @@ export default function NumberGrid({ numbers, onSelectNumber }: NumberGridProps)
       </div>
 
       {/* Hint */}
-      <p className="text-center text-purple-300/50 text-xs mt-4">
+      <p className="text-center text-blue-300/50 text-xs mt-4">
         Tocá un número verde para reservarlo
       </p>
     </section>
@@ -43,7 +43,7 @@ function LegendItem({ color, label }: { color: string; label: string }) {
   return (
     <div className="flex items-center gap-2">
       <div className={`w-4 h-4 rounded-md border ${color}`} />
-      <span className="text-purple-200 text-xs font-medium">{label}</span>
+      <span className="text-blue-200 text-xs font-medium">{label}</span>
     </div>
   );
 }
