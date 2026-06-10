@@ -3,7 +3,7 @@
 import React from 'react';
 
 const ALIAS = 'mspcomp.mp';
-const WHATSAPP = '543446407760'; // Formato: 5491112345678
+const WHATSAPP = '543446203480'; // Formato: 5491112345678
 
 const steps = [
   { num: 1, text: 'Elegí tu número favorito en la grilla de abajo.' },
